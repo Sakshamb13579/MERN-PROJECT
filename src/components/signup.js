@@ -1,6 +1,6 @@
 import React from 'react';
 import './signup.css';
-class SignUpPage extends React.Component {
+class signup extends React.Component {
   render() {
     return (
       <div className="box">
@@ -42,4 +42,4 @@ class SignUpPage extends React.Component {
   }
 }
 
-export default SignUpPage;
+export default signup;
