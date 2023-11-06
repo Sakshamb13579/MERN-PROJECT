@@ -1,6 +1,9 @@
 .footer {
-    border: 1px solid #000000;
-    padding: 10px;
-    text-align: center;
-  }
-  
+  padding: 50px;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.footer-para {
+  margin-top: 20px;
+}

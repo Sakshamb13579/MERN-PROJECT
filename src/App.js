@@ -1,14 +1,11 @@
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './components/HomePage';
 
 function App() {
   return (
-    <div>
-      <Header />
+    <div className="app-main">
       <HomePage />
-      <Footer />
     </div>
   );
 }
