@@ -1,12 +1,23 @@
 import React from 'react';
-import './signup.css';
-class signup extends React.Component {
-  render() {
-    return (
-      <div className="box">
-        <form autoComplete="off">
-          <a href="index.html" style={{ textDecoration: 'none', fontSize: '20px' }}>Personal Finance Tracker</a>
-          <h3>Sign up</h3>
+import { Link } from 'react-router-dom';
+import './SignupPage.css';
+import Header from './Header';
+import Footer from './Footer';
+
+function SignupPage() {
+  const headerLinks = [
+    { url: '/', text: 'Home' },
+    { url: '/login', text: 'Login' },
+    { url: '/about', text: 'About' },
+    { url: '/contact', text: 'Contact' }
+  ];
+  return (
+    <div className="signup-page">
+      <Header links={headerLinks} />
+
+      <div className="signup-box">
+        <form className="signup-form" autoComplete="off">
+          <h3 className="signup-main-head">Sign up</h3>
           <div className="inputBox">
             <input type="text" required="required" />
             <span>Userame</span>
@@ -33,13 +44,16 @@ class signup extends React.Component {
             <i></i>
           </div>
           <div className="links">
-            <a href="login.html">Already registered? Sign in</a>
+            <Link to="/login">Already registered? Sign in</Link>
           </div>
           <input type="submit" value="Signup" />
         </form>
       </div>
-    );
-  }
+
+      <Footer />
+    </div>
+  );
 }
 
-export default signup;
+
+export default SignupPage;

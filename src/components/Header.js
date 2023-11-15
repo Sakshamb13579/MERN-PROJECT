@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header({ links }) {
@@ -12,7 +13,7 @@ function Header({ links }) {
         <ul className="nav-list">
           {links.map((link, index) => (
             <li className="nav-item" key={index}>
-              <a href={link.url}>{link.text}</a>
+              <Link className="nav-item-link" to={link.url}>{link.text}</Link>
             </li>
           ))}
         </ul>

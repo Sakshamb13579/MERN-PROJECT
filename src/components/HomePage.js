@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './HomePage.css';
 import Header from './Header';
 import Footer from './Footer';
@@ -21,9 +22,9 @@ function HomePage() {
         <p className="upper-intro">
           Introducing Finance Tracker, your gateway to financial empowerment. Navigate the intricate world of personal finance with ease as you monitor expenditures, establish budgetary limits, and witness your savings flourish.
         </p>
-        <a className="upper-btn-container" href="/signup">
+        <Link className="upper-btn-container" to="/signup">
           <button className="btn btn-primary btn-lg upper-button">Sign Up</button>
-        </a>
+        </Link>
       </div>
 
       <div className="home-middle">
