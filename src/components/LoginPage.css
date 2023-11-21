@@ -1,4 +1,4 @@
-.signup-box {
+.login-box {
 	margin: auto;
 	margin-top: 100px;
 	margin-bottom: 200px;
@@ -10,7 +10,7 @@
 	overflow: hidden;
 }
 
-.signup-form {
+.login-form {
 	position: absolute;
 	inset: 2px;
 	background: #ffff;
@@ -21,7 +21,7 @@
 	flex-direction: column;
 }
 
-.signup-main-head {
+.login-main-head {
 	color: #ff689d;
 	font-weight: 500;
 	font-size: 35px;
