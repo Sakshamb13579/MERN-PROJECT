@@ -7,6 +7,7 @@ import Footer from './Footer';
 function HomePage() {
   const headerLinks = [
     { url: '/', text: 'Home' },
+    { url: '/dashboard', text: 'Dashboard' },
     { url: '/login', text: 'Login' },
     { url: '/about', text: 'About' },
     { url: '/contact', text: 'Contact' }

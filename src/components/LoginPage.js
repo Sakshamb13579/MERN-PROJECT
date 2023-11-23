@@ -27,12 +27,12 @@ function LoginPage() {
     setFormData({ ...formData, [name]: value });
   };
 
-   // Function to handle form submission
-   const handleLogin = async (e) => {
+  // Function to handle form submission
+  const handleLogin = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3500/api/auth/login', formData);
+      const response = await axios.post('https://finance-tracker-production.up.railway.app/api/auth/login', formData);
 
       if (response.status === 200) {
         // Login successful
@@ -43,14 +43,16 @@ function LoginPage() {
 
         // Redirect to the dashboard or another protected page
         history.push('/dashboard');
-      } else {
+      }
+      else if (response.status === 201) {
+        alert("Invalid email or password");
+      }
+      else {
         // Login failed
         console.error('Login failed');
-        // Handle the error, show a message to the user, etc.
       }
     } catch (error) {
       console.error('Error during login', error);
-      // Handle the error, show a message to the user, etc.
     }
   };
 
